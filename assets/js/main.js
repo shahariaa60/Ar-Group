@@ -8,21 +8,23 @@ document.addEventListener('DOMContentLoaded', () => {
   lucide.createIcons();
 
   // ==================== AOS ANIMATION ====================
+  const isMobile = window.innerWidth < 768;
   AOS.init({
-    duration: 800,
+    duration: isMobile ? 400 : 800,
     easing: 'ease-out-cubic',
     once: true,
-    offset: 50,
-    disable: window.innerWidth < 768 ? 'mobile' : false
+    offset: isMobile ? 0 : 50,
+    disable: isMobile ? 'mobile' : false
   });
 
   // ==================== SWIPER ====================
   new Swiper('.testimonial-swiper', {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 12,
     loop: true,
+    speed: 600,
     autoplay: {
-      delay: 5000,
+      delay: 4000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -30,8 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
       clickable: true,
     },
     breakpoints: {
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 }
+      640: { spaceBetween: 16 },
+      768: { slidesPerView: 2, spaceBetween: 20 },
+      1024: { slidesPerView: 3, spaceBetween: 24 }
     }
   });
 
@@ -133,59 +136,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (statParent) counterObserver2.observe(statParent);
   }
 
-  // ==================== GALLERY LIGHTBOX ====================
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxClose = document.getElementById('lightbox-close');
-  const lightboxPrev = document.getElementById('lightbox-prev');
-  const lightboxNext = document.getElementById('lightbox-next');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  let currentIndex = 0;
-  const gallerySrcs = [];
-
-  galleryItems.forEach((item, index) => {
-    gallerySrcs.push(item.dataset.src);
-    item.addEventListener('click', () => {
-      currentIndex = index;
-      openLightbox(item.dataset.src);
+  // ==================== FLIP CARD TOUCH SUPPORT ====================
+  if ('ontouchstart' in window) {
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const wasFlipped = this.classList.contains('flipped');
+        document.querySelectorAll('.flip-card.flipped').forEach(c => c.classList.remove('flipped'));
+        if (!wasFlipped) this.classList.add('flipped');
+      });
     });
-  });
-
-  function openLightbox(src) {
-    lightboxImg.src = src;
-    lightbox.classList.add('show');
-    document.body.style.overflow = 'hidden';
   }
-
-  function closeLightbox() {
-    lightbox.classList.remove('show');
-    document.body.style.overflow = '';
-  }
-
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + gallerySrcs.length) % gallerySrcs.length;
-    lightboxImg.src = gallerySrcs[currentIndex];
-  }
-
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % gallerySrcs.length;
-    lightboxImg.src = gallerySrcs[currentIndex];
-  }
-
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightboxPrev.addEventListener('click', prevImage);
-  lightboxNext.addEventListener('click', nextImage);
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('show')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') prevImage();
-    if (e.key === 'ArrowRight') nextImage();
-  });
 
   // ==================== FAQ ACCORDION ====================
   document.querySelectorAll('.faq-question').forEach(btn => {
@@ -290,37 +250,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ==================== PARALLAX HERO ====================
   const heroParallax = document.querySelector('.hero-parallax');
-  if (heroParallax) {
+  if (heroParallax && !isMobile) {
     window.addEventListener('scroll', () => {
       const scrollY = window.pageYOffset;
       if (scrollY < window.innerHeight) {
         heroParallax.style.transform = `translateY(${scrollY * 0.4}px)`;
       }
     }, { passive: true });
-  }
-
-  // ==================== CONTACT FORM ====================
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = contactForm.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-
-      // Simulate send
-      setTimeout(() => {
-        btn.textContent = 'Message Sent! ✓';
-        btn.style.background = '#16A34A';
-        setTimeout(() => {
-          btn.textContent = originalText;
-          btn.style.background = '';
-          btn.disabled = false;
-          contactForm.reset();
-        }, 3000);
-      }, 1500);
-    });
   }
 
   // ==================== TRACKING CODE PLACEHOLDER ====================

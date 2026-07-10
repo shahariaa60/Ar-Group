@@ -35,15 +35,14 @@
       "description": "Trusted overseas manpower recruitment agency based in Bangladesh, serving clients across 15+ countries.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Gulshan Avenue, Gulshan-1",
-        "addressLocality": "Dhaka",
-        "addressRegion": "Dhaka",
-        "postalCode": "1212",
-        "addressCountry": "BD"
+        "streetAddress": "Osiedle Wichrowe Wzgórze 6c",
+        "addressLocality": "Poznan",
+        "postalCode": "61-672",
+        "addressCountry": "PL"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+880-1700-000000",
+        "telephone": "+8801317151491",
         "contactType": "customer service",
         "areaServed": "BD"
       },
@@ -63,6 +62,9 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -91,7 +93,7 @@
       <div class="flex items-center justify-between h-[70px] lg:h-20">
         <!-- Logo -->
         <a href="#home" class="flex items-center gap-2">
-          <div class="w-10 h-10 rounded-xl bg-[#0F4C81] flex items-center justify-center text-white font-bold text-lg font-poppins shadow-md">AR</div>
+          <img src="assets/images/gallery/AR%20group%20logo_2.png" alt="AR Group Recruitment Agency" class="h-12 w-auto" />
           <div class="hidden sm:block">
             <span class="text-lg font-bold font-poppins text-[#1F2937] leading-tight">AR Group</span>
             <span class="block text-[10px] tracking-[0.15em] uppercase font-medium text-[#0F4C81] -mt-0.5">Recruitment Agency</span>
@@ -105,21 +107,15 @@
           <a href="#services" class="nav-link">Services</a>
           <a href="#countries" class="nav-link">Countries</a>
           <a href="#jobs" class="nav-link">Jobs</a>
-          <a href="#gallery" class="nav-link">Gallery</a>
           <a href="#faq" class="nav-link">FAQ</a>
           <a href="#contact" class="nav-link">Contact</a>
         </nav>
 
-        <!-- CTA -->
-        <div class="flex items-center gap-3">
-          <a href="#contact" class="hidden sm:inline-flex btn-primary text-sm">Apply Now</a>
-          <!-- Hamburger -->
-          <button id="hamburger" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle navigation menu">
-            <div class="hamburger-icon">
-              <span></span><span></span><span></span>
-            </div>
-          </button>
-        </div>
+        <button id="hamburger" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle navigation menu">
+          <div class="hamburger-icon">
+            <span></span><span></span><span></span>
+          </div>
+        </button>
       </div>
     </div>
   </header>
@@ -139,13 +135,9 @@
         <a href="#services" class="mobile-link">Services</a>
         <a href="#countries" class="mobile-link">Countries</a>
         <a href="#jobs" class="mobile-link">Jobs</a>
-        <a href="#gallery" class="mobile-link">Gallery</a>
         <a href="#faq" class="mobile-link">FAQ</a>
         <a href="#contact" class="mobile-link">Contact</a>
       </nav>
-      <div class="mt-6 pt-6 border-t border-gray-100">
-        <a href="#contact" class="btn-primary w-full text-center text-sm">Apply Now</a>
-      </div>
     </div>
   </div>
 
@@ -165,8 +157,7 @@
           Trusted Overseas Recruitment Agency Helping Skilled Professionals Build Successful Careers Worldwide.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="#contact" class="btn-primary text-base">Apply Now</a>
-          <a href="#contact" class="btn-outline text-base border-white/30 text-white hover:bg-white/10">Contact Us</a>
+          <a href="#contact" class="btn-primary text-base">Contact Us</a>
           <a href="#jobs" class="btn-secondary text-base">View Jobs</a>
         </div>
       </div>
@@ -253,18 +244,18 @@
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-card"><div class="service-icon"><i data-lucide="hard-hat"></i></div><h3>Construction Workers</h3><p>Skilled masons, carpenters, steel fixers, and general construction laborers for infrastructure projects worldwide.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="bus"></i></div><h3>Bus Drivers</h3><p>Experienced and licensed bus operators with international driving permits and clean records.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="truck"></i></div><h3>Heavy Drivers</h3><p>Truck, dump truck, and trailer operators with extensive experience in logistics and transport.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="flame"></i></div><h3>Welders</h3><p>Certified welders specializing in MIG, TIG, arc welding for oil & gas, construction, and manufacturing.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="plug"></i></div><h3>Electricians</h3><p>Licensed electricians for residential, commercial, and industrial electrical installations and maintenance.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="droplets"></i></div><h3>Plumbers</h3><p>Skilled plumbers for pipe fitting, drainage systems, water supply, and sanitary installations.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="factory"></i></div><h3>Factory Workers</h3><p>Production operators, machine operators, and general factory workers for manufacturing industries.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="hotel"></i></div><h3>Hotel Staff</h3><p>Chefs, waiters, housekeepers, front desk, and hospitality professionals for hotels and resorts.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="spray-can"></i></div><h3>Cleaners</h3><p>Professional cleaners for commercial, industrial, and residential cleaning services.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="heart"></i></div><h3>Caregivers</h3><p>Compassionate caregivers, nurses, and elderly care professionals for healthcare facilities and homes.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="wheat"></i></div><h3>Agricultural Workers</h3><p>Farm workers, harvesters, and agricultural laborers for farms and plantations.</p></div>
-        <div class="service-card"><div class="service-icon"><i data-lucide="package"></i></div><h3>Warehouse Workers</h3><p>Warehouse associates, forklift operators, and logistics personnel for supply chain operations.</p></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/construction.jpg" alt="Construction Workers" loading="lazy" /><h3>Construction Workers</h3></div><div class="flip-card-back"><h4>Construction Workers</h4><ul><li>Skilled masons &amp; carpenters</li><li>Steel fixers &amp; reinforcement</li><li>General construction laborers</li><li>Infrastructure project experience</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/bus-driver.jpg" alt="Bus Drivers" loading="lazy" /><h3>Bus Drivers</h3></div><div class="flip-card-back"><h4>Bus Drivers</h4><ul><li>Licensed bus operators</li><li>International driving permits</li><li>Clean driving records</li><li>Long-haul &amp; city route experience</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/heavy-driver.jpg" alt="Heavy Drivers" loading="lazy" /><h3>Heavy Drivers</h3></div><div class="flip-card-back"><h4>Heavy Drivers</h4><ul><li>Truck &amp; trailer operators</li><li>Dump truck experience</li><li>Logistics &amp; transport</li><li>Valid heavy vehicle license</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/welder.jpg" alt="Welders" loading="lazy" /><h3>Welders</h3></div><div class="flip-card-back"><h4>Welders</h4><ul><li>MIG, TIG &amp; arc welding</li><li>Oil &amp; gas certified</li><li>Construction &amp; manufacturing</li><li>International certification</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/electrician.jpg" alt="Electricians" loading="lazy" /><h3>Electricians</h3></div><div class="flip-card-back"><h4>Electricians</h4><ul><li>Licensed electricians</li><li>Residential &amp; commercial</li><li>Industrial installations</li><li>Maintenance &amp; repair</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/plumber.jpg" alt="Plumbers" loading="lazy" /><h3>Plumbers</h3></div><div class="flip-card-back"><h4>Plumbers</h4><ul><li>Pipe fitting specialists</li><li>Drainage systems</li><li>Water supply installation</li><li>Sanitary systems</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/factory.jpg" alt="Factory Workers" loading="lazy" /><h3>Factory Workers</h3></div><div class="flip-card-back"><h4>Factory Workers</h4><ul><li>Production operators</li><li>Machine operators</li><li>Assembly line workers</li><li>Quality control</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/hotel-staff.jpg" alt="Hotel Staff" loading="lazy" /><h3>Hotel Staff</h3></div><div class="flip-card-back"><h4>Hotel Staff</h4><ul><li>Chefs &amp; kitchen staff</li><li>Waiters &amp; service</li><li>Housekeeping</li><li>Front desk &amp; management</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/cleaner.jpg" alt="Cleaners" loading="lazy" /><h3>Cleaners</h3></div><div class="flip-card-back"><h4>Cleaners</h4><ul><li>Commercial cleaning</li><li>Industrial cleaning</li><li>Residential services</li><li>Specialized equipment</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/caregiver.jpg" alt="Caregivers" loading="lazy" /><h3>Caregivers</h3></div><div class="flip-card-back"><h4>Caregivers</h4><ul><li>Elderly care professionals</li><li>Nursing assistance</li><li>Healthcare facilities</li><li>Home care services</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/agriculture.jpg" alt="Agricultural Workers" loading="lazy" /><h3>Agricultural Workers</h3></div><div class="flip-card-back"><h4>Agricultural Workers</h4><ul><li>Farm workers &amp; harvesters</li><li>Plantation experience</li><li>Crop management</li><li>Equipment operation</li></ul></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="assets/images/services/warehouse.jpg" alt="Warehouse Workers" loading="lazy" /><h3>Warehouse Workers</h3></div><div class="flip-card-back"><h4>Warehouse Workers</h4><ul><li>Warehouse associates</li><li>Forklift operators</li><li>Inventory management</li><li>Logistics &amp; packing</li></ul></div></div></div>
       </div>
 
       <!-- Support Services -->
@@ -343,17 +334,17 @@
       </div>
 
       <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="job-card"><div class="job-card-header"><span class="job-badge">Urgent</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Saudi Arabia</span></div><h3 class="job-title">Bus Driver</h3><div class="job-details"><div><span class="job-label">Salary</span><span class="job-value">$1,200 - $1,500/mo</span></div><div><span class="job-label">Contract</span><span class="job-value">2 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Hours</span><span class="job-value">8 hrs/day</span></div></div><a href="#contact" class="btn-primary w-full text-center text-sm mt-4">Apply Now</a></div>
+        <div class="job-card"><div class="job-card-header"><span class="job-badge">Urgent</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Saudi Arabia</span></div><h3 class="job-title">Bus Driver</h3><div class="job-details"><div><span class="job-label">Contract</span><span class="job-value">2 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Hours</span><span class="job-value">8 hrs/day</span></div></div></div>
 
-        <div class="job-card"><div class="job-card-header"><span class="job-badge bg-[#16A34A]/10 text-[#16A34A]">Hot</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> UAE</span></div><h3 class="job-title">Welder</h3><div class="job-details"><div><span class="job-label">Salary</span><span class="job-value">$1,000 - $1,400/mo</span></div><div><span class="job-label">Contract</span><span class="job-value">2 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Hours</span><span class="job-value">8 hrs/day</span></div></div><a href="#contact" class="btn-primary w-full text-center text-sm mt-4">Apply Now</a></div>
+        <div class="job-card"><div class="job-card-header"><span class="job-badge bg-[#16A34A]/10 text-[#16A34A]">Hot</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> UAE</span></div><h3 class="job-title">Welder</h3><div class="job-details"><div><span class="job-label">Contract</span><span class="job-value">2 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Hours</span><span class="job-value">8 hrs/day</span></div></div></div>
 
-        <div class="job-card"><div class="job-card-header"><span class="job-badge">Urgent</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Qatar</span></div><h3 class="job-title">Construction Worker</h3><div class="job-details"><div><span class="job-label">Salary</span><span class="job-value">$800 - $1,200/mo</span></div><div><span class="job-label">Contract</span><span class="job-value">2 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value">Allowance</span></div><div><span class="job-label">Hours</span><span class="job-value">9 hrs/day</span></div></div><a href="#contact" class="btn-primary w-full text-center text-sm mt-4">Apply Now</a></div>
+        <div class="job-card"><div class="job-card-header"><span class="job-badge">Urgent</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Qatar</span></div><h3 class="job-title">Construction Worker</h3><div class="job-details"><div><span class="job-label">Contract</span><span class="job-value">2 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value">Allowance</span></div><div><span class="job-label">Hours</span><span class="job-value">9 hrs/day</span></div></div></div>
 
-        <div class="job-card"><div class="job-card-header"><span class="job-badge bg-[#16A34A]/10 text-[#16A34A]">Hot</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Malaysia</span></div><h3 class="job-title">Electrician</h3><div class="job-details"><div><span class="job-label">Salary</span><span class="job-value">$900 - $1,300/mo</span></div><div><span class="job-label">Contract</span><span class="job-value">2 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value">Allowance</span></div><div><span class="job-label">Hours</span><span class="job-value">8 hrs/day</span></div></div><a href="#contact" class="btn-primary w-full text-center text-sm mt-4">Apply Now</a></div>
+        <div class="job-card"><div class="job-card-header"><span class="job-badge bg-[#16A34A]/10 text-[#16A34A]">Hot</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Malaysia</span></div><h3 class="job-title">Electrician</h3><div class="job-details"><div><span class="job-label">Contract</span><span class="job-value">2 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value">Allowance</span></div><div><span class="job-label">Hours</span><span class="job-value">8 hrs/day</span></div></div></div>
 
-        <div class="job-card"><div class="job-card-header"><span class="job-badge">New</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Poland</span></div><h3 class="job-title">Factory Worker</h3><div class="job-details"><div><span class="job-label">Salary</span><span class="job-value">$1,000 - $1,400/mo</span></div><div><span class="job-label">Contract</span><span class="job-value">3 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Hours</span><span class="job-value">8 hrs/day</span></div></div><a href="#contact" class="btn-primary w-full text-center text-sm mt-4">Apply Now</a></div>
+        <div class="job-card"><div class="job-card-header"><span class="job-badge">New</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Poland</span></div><h3 class="job-title">Factory Worker</h3><div class="job-details"><div><span class="job-label">Contract</span><span class="job-value">3 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Hours</span><span class="job-value">8 hrs/day</span></div></div></div>
 
-        <div class="job-card"><div class="job-card-header"><span class="job-badge">New</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Singapore</span></div><h3 class="job-title">Warehouse Worker</h3><div class="job-details"><div><span class="job-label">Salary</span><span class="job-value">$1,100 - $1,600/mo</span></div><div><span class="job-label">Contract</span><span class="job-value">2 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value">Allowance</span></div><div><span class="job-label">Hours</span><span class="job-value">8 hrs/day</span></div></div><a href="#contact" class="btn-primary w-full text-center text-sm mt-4">Apply Now</a></div>
+        <div class="job-card"><div class="job-card-header"><span class="job-badge">New</span><span class="job-country"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Singapore</span></div><h3 class="job-title">Warehouse Worker</h3><div class="job-details"><div><span class="job-label">Contract</span><span class="job-value">2 Years</span></div><div><span class="job-label">Accommodation</span><span class="job-value text-[#16A34A]">Free</span></div><div><span class="job-label">Food</span><span class="job-value">Allowance</span></div><div><span class="job-label">Hours</span><span class="job-value">8 hrs/day</span></div></div></div>
       </div>
     </div>
   </section>
@@ -390,25 +381,7 @@
     </div>
   </section>
 
-  <!-- ==================== GALLERY ==================== -->
-  <section id="gallery" class="section-padding bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
-        <span class="section-tag">Gallery</span>
-        <h2 class="section-title">Our Moments</h2>
-        <p class="text-[#4B5563]">A glimpse into our office, training sessions, departures, and workers abroad.</p>
-      </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4" data-aos="fade-up">
-        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=60" alt="Our Office" loading="lazy" /><div class="gallery-overlay"><i data-lucide="expand" class="w-6 h-6 text-white"></i><span>Our Office</span></div></div>
-        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=60" alt="Interview Session" loading="lazy" /><div class="gallery-overlay"><i data-lucide="expand" class="w-6 h-6 text-white"></i><span>Interview Session</span></div></div>
-        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&q=60" alt="Training Program" loading="lazy" /><div class="gallery-overlay"><i data-lucide="expand" class="w-6 h-6 text-white"></i><span>Training Program</span></div></div>
-        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=60" alt="Documentation" loading="lazy" /><div class="gallery-overlay"><i data-lucide="expand" class="w-6 h-6 text-white"></i><span>Documentation</span></div></div>
-        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1436491865332-7a61a1095c05?w=800&q=80"><img src="https://images.unsplash.com/photo-1436491865332-7a61a1095c05?w=400&q=60" alt="Airport Departure" loading="lazy" /><div class="gallery-overlay"><i data-lucide="expand" class="w-6 h-6 text-white"></i><span>Airport Departure</span></div></div>
-        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=60" alt="Workers Abroad" loading="lazy" /><div class="gallery-overlay"><i data-lucide="expand" class="w-6 h-6 text-white"></i><span>Workers Abroad</span></div></div>
-      </div>
-    </div>
-  </section>
 
   <!-- ==================== TESTIMONIALS ==================== -->
   <section class="section-padding bg-[#F8FAFC]">
@@ -459,39 +432,11 @@
         <p class="text-[#4B5563]">Ready to start your overseas career journey? Contact us today.</p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-10" data-aos="fade-up">
-        <!-- Contact Info -->
-        <div>
-          <div class="grid sm:grid-cols-2 gap-4 mb-8">
-            <div class="contact-info-card"><div class="contact-icon bg-[#0F4C81]/10"><i data-lucide="map-pin" class="w-5 h-5 text-[#0F4C81]"></i></div><h4>Office Address</h4><p>123 Gulshan Avenue, Gulshan-1<br />Dhaka 1212, Bangladesh</p></div>
-            <div class="contact-info-card"><div class="contact-icon bg-[#16A34A]/10"><i data-lucide="phone" class="w-5 h-5 text-[#16A34A]"></i></div><h4>Phone & WhatsApp</h4><p><a href="tel:+8801700000000" class="hover:text-[#0F4C81] transition-colors">+880-1700-000000</a><br /><a href="https://wa.me/8801700000000" target="_blank" rel="noopener">WhatsApp: +880-1700-000000</a></p></div>
-            <div class="contact-info-card"><div class="contact-icon bg-[#F4B400]/10"><i data-lucide="mail" class="w-5 h-5 text-[#F4B400]"></i></div><h4>Email</h4><p><a href="mailto:info@argrouprecruitment.com" class="hover:text-[#0F4C81] transition-colors">info@argrouprecruitment.com</a><br /><a href="mailto:hr@argrouprecruitment.com" class="hover:text-[#0F4C81] transition-colors">hr@argrouprecruitment.com</a></p></div>
-            <div class="contact-info-card"><div class="contact-icon bg-[#0F4C81]/10"><i data-lucide="clock" class="w-5 h-5 text-[#0F4C81]"></i></div><h4>Working Hours</h4><p>Sat - Thu: 9:00 AM - 6:00 PM<br />Friday: Closed</p></div>
-          </div>
-
-          <!-- Map -->
-          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-[250px]">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.9024424301397!2d90.3910999149815!3d23.750858084589126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd552f2f45%3A0x196d5f3b2f7d7c3b!2sGulshan%2C%20Dhaka%2C%20Bangladesh!5e0!3m2!1sen!2s!4v1!4m5!1m2!2m1!1sGulshan+Dhaka!3m1!1s0x3755b8bd552f2f45:0x196d5f3b2f7d7c3b" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AR Group Office Location"></iframe>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100">
-          <h3 class="text-2xl font-bold font-poppins text-[#1F2937] mb-6">Send Us a Message</h3>
-          <form id="contact-form" class="space-y-4">
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div><label for="name" class="form-label">Full Name</label><input type="text" id="name" name="name" class="form-input" required placeholder="Your full name" /></div>
-              <div><label for="phone" class="form-label">Phone Number</label><input type="tel" id="phone" name="phone" class="form-input" required placeholder="+880" /></div>
-            </div>
-            <div><label for="email" class="form-label">Email Address</label><input type="email" id="email" name="email" class="form-input" required placeholder="your@email.com" /></div>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div><label for="country-interest" class="form-label">Country of Interest</label><select id="country-interest" name="country-interest" class="form-input"><option value="">Select a country</option><option>Saudi Arabia</option><option>UAE</option><option>Qatar</option><option>Oman</option><option>Kuwait</option><option>Bahrain</option><option>Malaysia</option><option>Singapore</option><option>Romania</option><option>Croatia</option><option>Poland</option><option>Hungary</option><option>Other</option></select></div>
-              <div><label for="occupation" class="form-label">Occupation</label><input type="text" id="occupation" name="occupation" class="form-input" placeholder="e.g. Driver, Welder" /></div>
-            </div>
-            <div><label for="message" class="form-label">Message</label><textarea id="message" name="message" class="form-input" rows="4" required placeholder="Tell us about your experience and requirements..."></textarea></div>
-            <button type="submit" class="btn-primary w-full text-base">Send Message</button>
-          </form>
-        </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" data-aos="fade-up">
+        <div class="contact-info-card"><div class="contact-icon bg-[#0F4C81]/10"><i data-lucide="map-pin" class="w-5 h-5 text-[#0F4C81]"></i></div><h4>Office Address</h4><p>Osiedle Wichrowe Wzgórze 6c<br />61-672, Poznan, Poland</p></div>
+        <div class="contact-info-card"><div class="contact-icon bg-[#16A34A]/10"><i data-lucide="phone" class="w-5 h-5 text-[#16A34A]"></i></div><h4>Phone & WhatsApp</h4><p><a href="tel:+8801317151491" class="hover:text-[#0F4C81] transition-colors">+8801317151491</a><br /><a href="https://wa.me/8801317151491" target="_blank" rel="noopener">WhatsApp: +8801317151491</a></p></div>
+        <div class="contact-info-card"><div class="contact-icon bg-[#F4B400]/10"><i data-lucide="mail" class="w-5 h-5 text-[#F4B400]"></i></div><h4>Email</h4><p><a href="mailto:argroup.infor@gmail.com" class="hover:text-[#0F4C81] transition-colors">argroup.infor@gmail.com</a></p></div>
+        <div class="contact-info-card"><div class="contact-icon bg-[#0F4C81]/10"><i data-lucide="clock" class="w-5 h-5 text-[#0F4C81]"></i></div><h4>Working Hours</h4><p>Sat - Thu: 9:00 AM - 6:00 PM<br />Friday: Closed</p></div>
       </div>
     </div>
   </section>
@@ -503,18 +448,14 @@
         <!-- Brand -->
         <div>
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-xl bg-[#0F4C81] flex items-center justify-center text-white font-bold text-xl font-poppins">AR</div>
-            <div>
-              <span class="text-lg font-bold font-poppins text-white leading-tight">AR Group</span>
-              <span class="block text-[10px] tracking-[0.15em] uppercase font-medium text-[#F4B400] -mt-0.5">Recruitment Agency</span>
-            </div>
+            <img src="assets/images/gallery/AR%20group%20logo_2.png" alt="AR Group Recruitment Agency" class="h-12 w-auto brightness-0 invert" />
           </div>
           <p class="text-gray-400 text-sm leading-relaxed mb-6">Trusted overseas manpower recruitment agency connecting Bangladeshi workers with global opportunities since 2009.</p>
           <div class="flex gap-3">
-            <a href="https://facebook.com/argrouprecruitment" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-            <a href="https://linkedin.com/company/argrouprecruitment" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-            <a href="https://youtube.com/@argrouprecruitment" target="_blank" rel="noopener" class="social-link" aria-label="YouTube"><i data-lucide="youtube" class="w-5 h-5"></i></a>
-            <a href="https://wa.me/8801700000000" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
+            <a href="https://facebook.com/argrouprecruitment" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f text-lg"></i></a>
+            <a href="https://linkedin.com/company/argrouprecruitment" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-lg"></i></a>
+            <a href="https://youtube.com/@argrouprecruitment" target="_blank" rel="noopener" class="social-link" aria-label="YouTube"><i class="fab fa-youtube text-lg"></i></a>
+            <a href="https://wa.me/8801317151491" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp text-lg"></i></a>
           </div>
         </div>
 
@@ -548,9 +489,9 @@
         <div>
           <h4 class="text-white font-semibold font-poppins mb-5">Contact Info</h4>
           <ul class="space-y-4">
-            <li class="flex gap-3 text-sm text-gray-400"><i data-lucide="map-pin" class="w-5 h-5 text-[#F4B400] shrink-0 mt-0.5"></i><span>123 Gulshan Avenue, Gulshan-1, Dhaka 1212, Bangladesh</span></li>
-            <li class="flex gap-3 text-sm text-gray-400"><i data-lucide="phone" class="w-5 h-5 text-[#F4B400] shrink-0 mt-0.5"></i><span>+880-1700-000000</span></li>
-            <li class="flex gap-3 text-sm text-gray-400"><i data-lucide="mail" class="w-5 h-5 text-[#F4B400] shrink-0 mt-0.5"></i><span>info@argrouprecruitment.com</span></li>
+            <li class="flex gap-3 text-sm text-gray-400"><i data-lucide="map-pin" class="w-5 h-5 text-[#F4B400] shrink-0 mt-0.5"></i><span>Osiedle Wichrowe Wzgórze 6c, 61-672, Poznan, Poland</span></li>
+            <li class="flex gap-3 text-sm text-gray-400"><i data-lucide="phone" class="w-5 h-5 text-[#F4B400] shrink-0 mt-0.5"></i><span>+8801317151491</span></li>
+            <li class="flex gap-3 text-sm text-gray-400"><i data-lucide="mail" class="w-5 h-5 text-[#F4B400] shrink-0 mt-0.5"></i><span>argroup.infor@gmail.com</span></li>
             <li class="flex gap-3 text-sm text-gray-400"><i data-lucide="clock" class="w-5 h-5 text-[#F4B400] shrink-0 mt-0.5"></i><span>Sat - Thu: 9AM - 6PM</span></li>
           </ul>
         </div>
@@ -573,14 +514,6 @@
   <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-xl bg-[#0F4C81] text-white shadow-lg flex items-center justify-center opacity-0 invisible translate-y-4 transition-all duration-300 hover:bg-[#0a3a63] z-[9995]" aria-label="Back to top">
     <i data-lucide="arrow-up" class="w-5 h-5"></i>
   </button>
-
-  <!-- ==================== LIGHTBOX ==================== -->
-  <div id="lightbox" class="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-sm hidden items-center justify-center">
-    <button id="lightbox-close" class="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors" aria-label="Close lightbox"><i data-lucide="x" class="w-6 h-6"></i></button>
-    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors" aria-label="Previous image"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
-    <img id="lightbox-img" class="max-w-[90vw] max-h-[85vh] rounded-2xl shadow-2xl" src="" alt="" />
-    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors" aria-label="Next image"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
-  </div>
 
   <!-- ==================== SCRIPTS ==================== -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
