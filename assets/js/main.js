@@ -48,6 +48,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
+  // ==================== TYPING EFFECT ====================
+  const typingEl = document.querySelector('.typing-text');
+  if (typingEl) {
+    const text = typingEl.textContent;
+    typingEl.textContent = '';
+    let i = 0;
+    let deleting = false;
+
+    function typeLoop() {
+      if (!deleting) {
+        if (i < text.length) {
+          typingEl.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeLoop, 50);
+        } else {
+          deleting = true;
+          setTimeout(typeLoop, 3000);
+        }
+      } else {
+        if (i > 0) {
+          typingEl.textContent = text.substring(0, i - 1);
+          i--;
+          setTimeout(typeLoop, 25);
+        } else {
+          deleting = false;
+          setTimeout(typeLoop, 500);
+        }
+      }
+    }
+
+    setTimeout(typeLoop, 800);
+  }
+
   // ==================== MOBILE MENU ====================
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
