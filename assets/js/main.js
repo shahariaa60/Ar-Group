@@ -17,30 +17,27 @@ document.addEventListener('DOMContentLoaded', () => {
     disable: isMobile ? 'mobile' : false
   });
 
-  // ==================== SWIPER ====================
-  new Swiper('.testimonial-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 12,
-    loop: true,
-    speed: 600,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      640: { spaceBetween: 16 },
-      768: { slidesPerView: 2, spaceBetween: 20 },
-      1024: { slidesPerView: 3, spaceBetween: 24 }
-    }
-  });
+  // ==================== SWIPER (testimonials) ====================
+  if (document.querySelector('.testimonial-swiper')) {
+    try {
+      new Swiper('.testimonial-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 12,
+        loop: true,
+        speed: 600,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        breakpoints: {
+          640: { spaceBetween: 16 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
+          1024: { slidesPerView: 3, spaceBetween: 24 }
+        }
+      });
+    } catch (e) {}
+  }
 
   // ==================== NAVBAR SCROLL ====================
   const navbar = document.getElementById('navbar');
-  let lastScroll = 0;
 
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -49,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       navbar.classList.remove('scrolled');
     }
-    lastScroll = currentScroll;
   }, { passive: true });
 
   // ==================== MOBILE MENU ====================
@@ -82,20 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(counter => {
       const target = parseInt(counter.dataset.target);
       const suffix = counter.dataset.suffix || '';
-      const duration = 2000;
-      const step = Math.max(1, Math.floor(target / 60));
-      let current = 0;
-
-      const update = () => {
-        current += step;
-        if (current >= target) {
-          counter.textContent = target + suffix;
-          return;
-        }
-        counter.textContent = current + suffix;
-        requestAnimationFrame(() => setTimeout(update, 30));
-      };
-      update();
+      counter.textContent = target + suffix;
     });
   }
 
